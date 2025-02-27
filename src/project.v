@@ -17,10 +17,9 @@ module tt_um_project (
 );
     
   wire [8:0] sum; // 9-bit sum to capture carry-out
-
-  assign sum    = ui_in + uio_in;  // Perform 8-bit addition
     
   // All output pins must be assigned. If not used, assign to 0.
+  assign sum    = ui_in + uio_in;  // Perform 8-bit addition
   assign uo_out = sum[7:0];        // Lower 8 bits as output (sum result)
   assign uio_out = 0;
   assign uio_oe  = 0;
